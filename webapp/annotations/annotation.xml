@@ -31,6 +31,10 @@
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
                         </Record>
                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PackageName" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                        </Record>
+                        <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="Complexity" />
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
                         </Record>
@@ -47,6 +51,30 @@
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
                         </Record>
                     </Collection>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant">
+                    <Record Type="UI.PresentationVariantType">
+                        <PropertyValue Property="Visualizations">
+                            <Collection>
+                                <AnnotationPath>@UI.LineItem</AnnotationPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="RequestAtLeast">
+                            <Collection>
+                                <PropertyPath>PackageName</PropertyPath>
+                                <PropertyPath>InstanceUsed</PropertyPath>
+                                <PropertyPath>CreatedOn</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="CreatedOn" />
+                                    <PropertyValue Property="Descending" Bool="true" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
                 </Annotation>
                 <Annotation Term="UI.HeaderInfo">
                     <Record>
@@ -98,6 +126,7 @@
                                 </Record>
                             </Collection>
                         </PropertyValue>
+                        <PropertyValue Property="Label" String="{@i18n>instanceData}" />
                     </Record>
                 </Annotation>
                 <Annotation Term="UI.FieldGroup" Qualifier="RIEFW">
@@ -221,14 +250,6 @@
                         </Record>
                     </Collection>
                 </Annotation>
-            </Annotations>
-            <Annotations Target="ZRIEFW_INVENTORY_SRV.detail/InstanceUsed" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="Common.ValueList">
-                    
-                </Annotation>
-            </Annotations>
-            <Annotations Target="ZRIEFW_INVENTORY_SRV.ZRIEFW_INVENTORY_SRV_Entities/detailSet/InstanceUsed">
-                <Annotation Term="com.sap.vocabularies.UI.v1.TextArrangement" EnumMember="com.sap.vocabularies.UI.v1.TextArrangementType/TextOnly" />
             </Annotations>
         </Schema>
     </edmx:DataServices>

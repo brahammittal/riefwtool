@@ -143,6 +143,7 @@
                     sap:creatable="true"
                     sap:updatable="true"
                     sap:sortable="false"
+                    sap:value-list="fixed-values"
                 />
                 <Property
                     Name="LogicalGrouping"

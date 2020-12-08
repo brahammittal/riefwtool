@@ -1,24 +1,24 @@
 {
-    "fileName": "id_1606923249701_5_propertyChange",
+    "fileName": "id_1607089715120_35_propertyChange",
     "fileType": "change",
     "changeType": "propertyChange",
     "moduleName": "",
     "reference": "project3",
     "packageName": "",
     "content": {
-        "property": "alwaysShowContentHeader",
+        "property": "includeItemInSelection",
         "newValue": true
     },
     "selector": {
-        "id": "project3::sap.suite.ui.generic.template.ObjectPage.view.Details::detailSet--objectPage",
+        "id": "project3::sap.suite.ui.generic.template.ListReport.view.ListReport::detailSet--responsiveTable",
         "idIsLocal": false,
-        "type": "sap.uxap.ObjectPageLayout"
+        "type": "sap.m.Table"
     },
     "layer": "VENDOR",
     "texts": {},
     "namespace": "apps/project3/changes/",
     "projectId": "project3",
-    "creation": 1606923249701,
+    "creation": 1607089715120,
     "originalLanguage": "",
     "support": {
         "generator": "changeUtils: SAPFioriTools",
