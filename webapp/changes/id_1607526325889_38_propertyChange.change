@@ -1,5 +1,5 @@
 {
-    "fileName": "id_1606923203023_0_propertyChange",
+    "fileName": "id_1607526325889_38_propertyChange",
     "fileType": "change",
     "changeType": "propertyChange",
     "moduleName": "",
@@ -7,7 +7,7 @@
     "packageName": "",
     "content": {
         "property": "displayShape",
-        "newValue": "Circle"
+        "newValue": "Square"
     },
     "selector": {
         "id": "project3::sap.suite.ui.generic.template.ObjectPage.view.Details::detailSet--objectImage",
@@ -18,7 +18,7 @@
     "texts": {},
     "namespace": "apps/project3/changes/",
     "projectId": "project3",
-    "creation": 1606923203023,
+    "creation": 1607526325889,
     "originalLanguage": "",
     "support": {
         "generator": "changeUtils: SAPFioriTools",

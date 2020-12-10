@@ -23,17 +23,7 @@
                     sap:updatable="false"
                     sap:sortable="false"
                 />
-                <Property
-                    Name="RicefwId"
-                    Type="Edm.String"
-                    Nullable="false"
-                    MaxLength="10"
-                    sap:unicode="false"
-                    sap:label="RICEFW ID"
-                    sap:creatable="false"
-                    sap:updatable="false"
-                    sap:sortable="false"
-                />
+                <Property Name="RicefwId" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="RICEFW ID" sap:creatable="false" sap:updatable="false" sap:sortable="true" />
                 <Property
                     Name="RicefwType"
                     Type="Edm.String"
@@ -76,7 +66,7 @@
                     sap:label="Package"
                     sap:creatable="false"
                     sap:updatable="false"
-                    sap:sortable="false"
+                    sap:sortable="true"
                 />
                 <Property
                     Name="ProcessArea"
@@ -211,7 +201,7 @@
                     sap:label="Created On"
                     sap:creatable="false"
                     sap:updatable="false"
-                    sap:sortable="false"
+                    sap:sortable="true"
                 />
                 <Property
                     Name="CreatedBy"
@@ -233,7 +223,7 @@
                     sap:label="Changed On"
                     sap:creatable="false"
                     sap:updatable="false"
-                    sap:sortable="false"
+                    sap:sortable="true"
                 />
                 <Property
                     Name="ChangedBy"

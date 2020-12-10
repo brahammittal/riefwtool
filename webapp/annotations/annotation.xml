@@ -61,15 +61,13 @@
                         </PropertyValue>
                         <PropertyValue Property="RequestAtLeast">
                             <Collection>
-                                <PropertyPath>PackageName</PropertyPath>
-                                <PropertyPath>InstanceUsed</PropertyPath>
-                                <PropertyPath>CreatedOn</PropertyPath>
+                                <PropertyPath>RicefwId</PropertyPath>
                             </Collection>
                         </PropertyValue>
                         <PropertyValue Property="SortOrder">
                             <Collection>
                                 <Record Type="Common.SortOrderType">
-                                    <PropertyValue Property="Property" PropertyPath="CreatedOn" />
+                                    <PropertyValue Property="Property" PropertyPath="RicefwId" />
                                     <PropertyValue Property="Descending" Bool="true" />
                                 </Record>
                             </Collection>
@@ -91,25 +89,31 @@
                 <Annotation Term="UI.HeaderFacets">
                     <Collection>
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Target" AnnotationPath="@UI.Identification#Admin" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Admin" />
                         </Record>
                     </Collection>
                 </Annotation>
-                <Annotation Term="UI.Identification" Qualifier="Admin">
-                    <Collection>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="CreatedBy" />
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="CreatedOn" />
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="ChangedBy" />
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="ChangedOn" />
-                        </Record>
-                    </Collection>
+                <Annotation Term="UI.FieldGroup" Qualifier="Admin">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CreatedBy" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CreatedOn" />
+                                    <PropertyValue Property="Label" String="{@i18n>createdOn}" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ChangedBy" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ChangedOn" />
+                                    <PropertyValue Property="Label" String="{@i18n>changedOn}" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
                 </Annotation>
                 <Annotation Term="UI.FieldGroup" Qualifier="Instance">
                     <Record Type="UI.FieldGroupType">

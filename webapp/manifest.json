@@ -135,11 +135,7 @@
                             "dateSettings": {
                                 "useDateRange": true
                             }
-                        },
-                        "tableSettings": {
-                            "type": "ResponsiveTable"
-                        },
-                        "enableTableFilterInPageVariant": true
+                        }
                     }
                 },
                 "pages": {
