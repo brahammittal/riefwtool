@@ -135,6 +135,9 @@
                             "dateSettings": {
                                 "useDateRange": true
                             }
+                        },
+                        "tableSettings": {
+                            "selectionLimit": 100
                         }
                     }
                 },
