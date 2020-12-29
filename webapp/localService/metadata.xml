@@ -41,21 +41,77 @@
                 <Key>
                     <PropertyRef Name="Guid" />
                 </Key>
+                <Property
+                    Name="ComplexityText"
+                    Type="Edm.String"
+                    Nullable="false"
+                    MaxLength="10"
+                    sap:unicode="false"
+                    sap:label="Character Field Length = 10"
+                    sap:creatable="false"
+                    sap:updatable="false"
+                    sap:sortable="false"
+                    sap:filterable="false"
+                />
+                <Property
+                    Name="RiefwtypText"
+                    Type="Edm.String"
+                    Nullable="false"
+                    MaxLength="15"
+                    sap:unicode="false"
+                    sap:label="Char15"
+                    sap:creatable="false"
+                    sap:updatable="false"
+                    sap:sortable="false"
+                    sap:filterable="false"
+                />
                 <Property Name="CreatedOn" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Created On" sap:creatable="false" sap:updatable="false" />
+                <Property
+                    Name="ProcessareaText"
+                    Type="Edm.String"
+                    Nullable="false"
+                    MaxLength="15"
+                    sap:unicode="false"
+                    sap:label="Char15"
+                    sap:creatable="false"
+                    sap:updatable="false"
+                    sap:sortable="false"
+                    sap:filterable="false"
+                />
+                <Property
+                    Name="IsMandatory"
+                    Type="Edm.Byte"
+                    Nullable="false"
+                    sap:unicode="false"
+                    sap:label="IS_MANDATORY"
+                    sap:creatable="false"
+                    sap:updatable="false"
+                    sap:sortable="false"
+                    sap:filterable="false"
+                />
                 <Property Name="Guid" Type="Edm.Binary" Nullable="false" sap:unicode="false" sap:label="GUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
-                <Property Name="ChangedOn" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Created On" sap:creatable="false" sap:updatable="false" />
+                <Property Name="ChangedOn" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Changed On" sap:creatable="false" sap:updatable="false" />
                 <Property Name="SystemId" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="SAP System ID" />
                 <Property Name="RicefwId" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="RICEFW ID" sap:creatable="false" sap:updatable="false" />
-                <Property Name="RicefwType" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="RICEFW Type" sap:value-list="fixed-values" />
+                <Property Name="RicefwType" Type="Edm.String" Nullable="false" MaxLength="1" sap:text="RiefwtypText" sap:unicode="false" sap:label="RICEFW Type" sap:value-list="fixed-values" />
                 <Property Name="RicefwDesc" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="RICEFW Description" />
                 <Property Name="RicefwAbout" Type="Edm.String" MaxLength="500" sap:unicode="false" sap:label="About RICEFW" />
                 <Property Name="PackageName" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Package" sap:creatable="false" sap:updatable="false" />
-                <Property Name="ProcessArea" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Process Area" sap:value-list="fixed-values" />
+                <Property Name="ProcessArea" Type="Edm.String" Nullable="false" MaxLength="3" sap:text="ProcessareaText" sap:unicode="false" sap:label="Process Area" sap:value-list="fixed-values" />
                 <Property Name="SubprocessArea" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Sub Process Area" />
                 <Property Name="BusinessOwner" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Business Owner" />
-                <Property Name="BusinessCriticality" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Business Criticality" />
-                <Property Name="Complexity" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Complexity" sap:value-list="fixed-values" />
-                <Property Name="InstanceUsed" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Instance Used" sap:value-list="fixed-values" />
+                <Property Name="BusinessCriticality" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Business Criticality" sap:value-list="fixed-values" />
+                <Property Name="Complexity" Type="Edm.String" Nullable="false" MaxLength="1" sap:text="ComplexityText" sap:unicode="false" sap:label="Complexity" sap:value-list="fixed-values" />
+                <Property
+                    Name="InstanceUsed"
+                    Type="Edm.String"
+                    Nullable="false"
+                    MaxLength="10"
+                    sap:field-control="IsMandatory"
+                    sap:unicode="false"
+                    sap:label="Instance Used"
+                    sap:value-list="fixed-values"
+                />
                 <Property Name="LogicalGrouping" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Logical Grouping" />
                 <Property Name="LegalRequirement" Type="Edm.Boolean" sap:unicode="false" sap:label="Legal Requirement" />
                 <Property Name="Comments" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="Comments" />
@@ -80,7 +136,7 @@
                 <Key>
                     <PropertyRef Name="Process" />
                 </Key>
-                <Property Name="Process" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Process Area" sap:creatable="false" sap:updatable="false" />
+                <Property Name="Process" Type="Edm.String" Nullable="false" sap:text="Descr" sap:unicode="false" sap:label="Process Area" sap:creatable="false" sap:updatable="false" />
                 <Property Name="Descr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" />
                 <Property Name="UIM_INFO" Type="Edm.String" sap:visible="false" sap:updatable="false" />
             </EntityType>
@@ -88,7 +144,7 @@
                 <Key>
                     <PropertyRef Name="RiefwType" />
                 </Key>
-                <Property Name="RiefwType" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="RICEFW Type" sap:creatable="false" sap:updatable="false" />
+                <Property Name="RiefwType" Type="Edm.String" Nullable="false" sap:text="Descr" sap:unicode="false" sap:label="RICEFW Type" sap:creatable="false" sap:updatable="false" />
                 <Property Name="Descr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" />
                 <Property Name="UIM_INFO" Type="Edm.String" sap:visible="false" sap:updatable="false" />
             </EntityType>
@@ -128,7 +184,6 @@
                     sap:updatable="false"
                     sap:deletable="false"
                     sap:pageable="false"
-                    sap:addressable="false"
                     sap:content-version="1"
                 />
             </EntityContainer>

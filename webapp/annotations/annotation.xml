@@ -1,4 +1,10 @@
 <edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="Core" />
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities" />
+    </edmx:Reference>
     <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Validation.V1.xml">
         <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation" />
     </edmx:Reference>
@@ -303,6 +309,9 @@
                     </Record>
                 </Annotation>
             </Annotations>
+            <Annotations Target="ZRIEFW_INVENTORY_SRV.detail">
+                <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+            </Annotations>
             <Annotations Target="ZRIEFW_INVENTORY_SRV.detail/ProcessArea">
                 <Annotation Term="Common.ValueList">
                     <Record>
@@ -340,6 +349,44 @@
                         </PropertyValue>
                     </Record>
                 </Annotation>
+            </Annotations>
+            <Annotations Target="ZRIEFW_INVENTORY_SRV.detail/CountrySpecific">
+                <Annotation Term="UI.Placeholder" String="{@i18n>countryForWhichThis}" />
+                <Annotation Term="Common.IsUpperCase" Bool="true" />
+            </Annotations>
+            <Annotations Target="ZRIEFW_INVENTORY_SRV.detail/BusinessCriticality">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="CollectionPath" String="Complexity" />
+                        <PropertyValue Property="SearchSupported" Bool="true" />
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="BusinessCriticality" />
+                                    <PropertyValue Property="ValueListProperty" String="Code" />
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Text" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZRIEFW_INVENTORY_SRV.detail/ComplexityText">
+                <Annotation Term="UI.Hidden" Bool="true" />
+            </Annotations>
+            <Annotations Target="ZRIEFW_INVENTORY_SRV.detail/ProcessareaText">
+                <Annotation Term="UI.Hidden" Bool="true" />
+            </Annotations>
+            <Annotations Target="ZRIEFW_INVENTORY_SRV.detail/RiefwtypText">
+                <Annotation Term="UI.Hidden" Bool="true" />
+            </Annotations>
+            <Annotations Target="ZRIEFW_INVENTORY_SRV.detail/Guid">
+                <Annotation Term="UI.Hidden" Bool="true" />
+            </Annotations>
+            <Annotations Target="ZRIEFW_INVENTORY_SRV.detail/IsMandatory">
+                <Annotation Term="UI.Hidden" Bool="true" />
             </Annotations>
         </Schema>
     </edmx:DataServices>
